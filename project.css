@@ -1,0 +1,131 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #f4f4f4;
+    background-color: #121212; /* Màu nền tối */
+    overflow-x: hidden;
+  }
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px;
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sidebar .logo {
+    font-size: 26px; /* Tăng nhẹ kích thước logo */
+    font-weight: bold;
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 40px; /* Tăng khoảng cách dưới logo */
+    text-transform: uppercase; /* Viết hoa toàn bộ chữ */
+    letter-spacing: 2px; /* Tăng khoảng cách giữa các ký tự */
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 20px 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Thêm khoảng cách nội bộ */
+    border-radius: 8px; /* Bo góc liên kết */
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links li a i {
+    margin-right: 15px; /* Tăng khoảng cách giữa icon và chữ */
+    font-size: 20px; /* Làm icon lớn hơn một chút */
+  }
+  
+  .nav-links li a:hover {
+    background-color: #ff9800; /* Nền cam khi hover */
+    color: #1a1a1a; /* Chữ màu đen khi hover */
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3); /* Hiệu ứng đổ bóng */
+  }
+  
+  .nav-links li a.active {
+    background-color: #ff9800; /* Nền cam cho mục đang active */
+    color: #1a1a1a; /* Chữ màu đen */
+  }
+
+
+.container {
+    display: flex;
+    height: 100vh;
+    margin-left: 250px; /* Space for Sidebar */
+    padding: 20px;
+}
+
+.content {
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+/* Project Grid */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Project Card */
+.project-item {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-item h3 {
+    font-size: 22px;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #d9d9d9;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+

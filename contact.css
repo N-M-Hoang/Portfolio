@@ -1,0 +1,172 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #f4f4f4;
+    background-color: #121212; /* Màu nền tối */
+    overflow-x: hidden;
+  }
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px;
+    background-color: #1a1a1a;
+    border-right: 1px solid #333;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sidebar .logo {
+    font-size: 26px; /* Tăng nhẹ kích thước logo */
+    font-weight: bold;
+    color: #ff9800;
+    text-align: center;
+    margin-bottom: 40px; /* Tăng khoảng cách dưới logo */
+    text-transform: uppercase; /* Viết hoa toàn bộ chữ */
+    letter-spacing: 2px; /* Tăng khoảng cách giữa các ký tự */
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 20px 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Thêm khoảng cách nội bộ */
+    border-radius: 8px; /* Bo góc liên kết */
+    transition: all 0.3s ease;
+  }
+  
+  .nav-links li a i {
+    margin-right: 15px; /* Tăng khoảng cách giữa icon và chữ */
+    font-size: 20px; /* Làm icon lớn hơn một chút */
+  }
+  
+  .nav-links li a:hover {
+    background-color: #ff9800; /* Nền cam khi hover */
+    color: #1a1a1a; /* Chữ màu đen khi hover */
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3); /* Hiệu ứng đổ bóng */
+  }
+  
+  .nav-links li a.active {
+    background-color: #ff9800; /* Nền cam cho mục đang active */
+    color: #1a1a1a; /* Chữ màu đen */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px 0;
+    }
+  
+    .sidebar .logo {
+        margin-bottom: 20px;
+    }
+  
+    .nav-links li {
+        margin: 10px 0;
+    }
+  
+    .nav-links li a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+  }
+  
+
+/* Contact Page Styles */
+.container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.content {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #ff4d4d;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 18px;
+    color: #d9d9d9;
+    margin-bottom: 40px;
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-item {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.contact-item i {
+    font-size: 30px;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.contact-item h3 {
+    font-size: 20px;
+    color: #f4f4f4;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #d9d9d9;
+}
+
+.contact-item a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}

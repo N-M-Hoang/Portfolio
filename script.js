@@ -1,6 +1,6 @@
 // Typing effect for the title
 const typingElement = document.querySelector(".typing");
-const words = ["Web Designer", "Graphic Designer", "Developer"];
+const words = ["Web Designer", "Backend Developer"];
 let wordIndex = 0;
 let letterIndex = 0;
 let isDeleting = false;
@@ -26,3 +26,15 @@ function type() {
 }
 
 type();
+
+// Redirect when "Hire Me" button is clicked
+const buttons = document.querySelectorAll(".btn"); // Chọn tất cả các nút có class "btn"
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (button.textContent.trim() === "Hire Me") {
+      // Điều hướng đến form liên hệ
+      window.location.href = "contact.html";
+    }
+  });
+});

@@ -32,13 +32,13 @@ body {
 }
 
 .sidebar .logo {
-  font-size: 26px; /* Tăng nhẹ kích thước logo */
+  font-size: 26px;
   font-weight: bold;
   color: #ff9800;
   text-align: center;
-  margin-bottom: 40px; /* Tăng khoảng cách dưới logo */
-  text-transform: uppercase; /* Viết hoa toàn bộ chữ */
-  letter-spacing: 2px; /* Tăng khoảng cách giữa các ký tự */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .nav-links {
@@ -57,51 +57,49 @@ body {
   font-weight: 500;
   display: flex;
   align-items: center;
-  padding: 10px 15px; /* Thêm khoảng cách nội bộ */
-  border-radius: 8px; /* Bo góc liên kết */
+  padding: 10px 15px;
+  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .nav-links li a i {
-  margin-right: 15px; /* Tăng khoảng cách giữa icon và chữ */
-  font-size: 20px; /* Làm icon lớn hơn một chút */
+  margin-right: 15px;
+  font-size: 20px;
 }
 
 .nav-links li a:hover {
-  background-color: #ff9800; /* Nền cam khi hover */
-  color: #1a1a1a; /* Chữ màu đen khi hover */
-  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3); /* Hiệu ứng đổ bóng */
+  background-color: #ff9800;
+  color: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
 }
 
 .nav-links li a.active {
-  background-color: #ff9800; /* Nền cam cho mục đang active */
-  color: #1a1a1a; /* Chữ màu đen */
+  background-color: #ff9800;
+  color: #1a1a1a;
 }
 
-/* Responsive Design */
+/* Responsive Design for Sidebar */
 @media (max-width: 768px) {
   .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-      padding: 10px 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px 0;
   }
 
   .sidebar .logo {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .nav-links li {
-      margin: 10px 0;
+    margin: 10px 0;
   }
 
   .nav-links li a {
-      font-size: 16px;
-      padding: 8px 12px;
+    font-size: 16px;
+    padding: 8px 12px;
   }
 }
-
-
 
 /* Main content styles */
 .content {
@@ -111,15 +109,18 @@ body {
   background-color: #121212;
 }
 
+/* Layout for the home section */
 .home {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 100%;
+  gap: 10px; /* Khoảng cách giữa nội dung và ảnh */
+  padding-top: 110px; /* Di chuyển toàn bộ nội dung xuống 20px */
 }
 
+/* Text section in home */
 .intro {
   max-width: 60%;
+  margin-right: 20px;
 }
 
 .intro h1 {
@@ -162,41 +163,50 @@ body {
 }
 
 /* Profile picture */
-.profile-picture img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.profile-picture {
+  display: flex;
+  justify-content: flex-end; /* Đẩy ảnh sát về phía nội dung */
+  align-items: center;
+  margin-left: 20px;
 }
 
-/* Responsive Design */
+.profile-picture img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #ff9800;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-picture img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-  }
-
-  .sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-  }
-
-  .content {
-      margin-left: 0;
-  }
-
   .home {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .intro {
-      max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa nội dung và ảnh */
+    padding-top: 20px; /* Di chuyển toàn bộ nội dung xuống 20px */
   }
 
   .profile-picture {
-      margin-top: 20px;
+    justify-content: center;
+    margin: 20px 0;
+    margin-left: 0;
+  }
+
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .intro {
+    max-width: 100%;
+    margin-right: 0;
   }
 }
